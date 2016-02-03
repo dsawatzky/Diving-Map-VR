@@ -9,7 +9,7 @@ public class SurroundClouds : MonoBehaviour {
 	void Start () {
 		
 		// In a days when I found god, yeahh yeahh 
-		theGod = GameObject.Find ( "God" );
+		theGod = GameObject.Find ( "First Person" );
 	
 	}
 	
