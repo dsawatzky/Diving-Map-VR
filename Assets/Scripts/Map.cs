@@ -18,7 +18,7 @@ public class Map : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("m"))
+		if (Input.GetKeyDown("joystick button 0"))
         {
             visible = !visible;
         }    
@@ -26,6 +26,6 @@ public class Map : MonoBehaviour
 
     void OnGUI()
     {
-		if (visible == false) Graphics.DrawTexture(new Rect(170, 80, image.width / 2, image.height / 2), image);
+		if (visible == true) Graphics.DrawTexture(new Rect(190, 100, image.width / 2, image.height / 2), image);
     }
 }
