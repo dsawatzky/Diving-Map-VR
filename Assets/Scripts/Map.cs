@@ -18,14 +18,19 @@ public class Map : MonoBehaviour
 
     void Update()
     {
-		if (Input.GetKeyDown("joystick button 0"))
+		if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown("m"))
         {
             visible = !visible;
-        }    
+        } 
+
+		if (Input.GetKeyDown("joystick button 1") || Input.GetKeyDown("r"))
+		{
+			Cardboard.SDK.VRModeEnabled = !Cardboard.SDK.VRModeEnabled;
+		}
     }
 
     void OnGUI()
     {
-		if (visible == true) Graphics.DrawTexture(new Rect(190, 100, image.width / 2, image.height / 2), image);
+		if (visible == true) Graphics.DrawTexture(new Rect(200, 120, image.width / 2, image.height / 2), image);
     }
 }
