@@ -18,16 +18,18 @@ public class Map : MonoBehaviour
 
     void Update()
     {
-		if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown("m"))
-        {
+		if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown("m") || Cardboard.SDK.Triggered==true)	{
             visible = !visible;
         } 
 
-		if (Input.GetKeyDown("joystick button 1") || Input.GetKeyDown("r"))
-		{
+		if (Input.GetKeyDown("joystick button 1") || Input.GetKeyDown("r"))	{
 			Cardboard.SDK.VRModeEnabled = !Cardboard.SDK.VRModeEnabled;
 		}
-    }
+
+		if (Input.GetKeyDown ("joystick button 2") || Input.GetKeyDown ("c")) {
+			Cardboard.SDK.Recenter();
+		}
+	}
 
     void OnGUI()
     {
